@@ -13,7 +13,7 @@ use Mix.Config
 # which you typically run after static files are built.
 config :mmserver, Mmserver.Endpoint,
   http: [port: {:system, "PORT"}],
-  url: [host: "example.com", port: 80],
+  url: [host: "ek-mm-server.herokuapp.com", port: 443],
   secret_key_base: System.get_env("SECRET_KEY_BASE"),
   cache_static_manifest: "priv/static/manifest.json"
 
