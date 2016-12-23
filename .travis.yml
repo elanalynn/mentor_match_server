@@ -1,0 +1,17 @@
+language: elixir
+elixir:
+- 1.2
+otp_release:
+- 18.2
+sudo: false
+addons:
+  postgresql: '9.4'
+before_script:
+- psql -c 'create database mmserver_test;' -U postgres
+deploy:
+  provider: heroku
+  api_key:
+    secure: xuRZY2VNP0Bq0RopNUCzW+UvjalrFqcqAOph30CYrL1ChMvKzUf9AWVKjrcYRJDMFHK8Tn1D5UxnLHpbmaPM4km3BnKs6Ss2PyXjzgnxorFxO0Nm7mzRVThLemI6EfHoQBOh6o9EiUrk3yxM1sdDRH90Ropifb/5eTPXFMDDZUmCbaRBpUYTO6DTlgd00aporpZsBrGBr/o+qHtjhHrdohfcMdyhjycl/PT5EwR7L02kAtNGhuwEKmHHNolKOK9AFfEXE4wmF5rt7bilPVtu7+mkUl8u9fW5YSHvaJskRBp8jb7p4IAsfw9g6rJD8Mq1jgC5IIN1KGxdw2zY23NEQESQaHrOBS7ImPyKpEjIlq7162iCz5+xrIPkyTqsQ5Rs/JPLxmgVAsktAj64HUCtGDuWBDPOzoSmjaIdwO8hPO28n/cp4BOHqsjVoGGXxtem36wWmBUbOvlPnWI6C/vrT+I6VouH9rucAT19c6tFK7MbYc19qLiQNyOkzJa80mL2d6yt4bXVMlIU8zUVglim7oU2fzyNW4BHoQk83q4Yt6p0nbgtLsT8A13vb3ZmR4/DmyEi00RQgbMVcE5yhgXWgkGa77mp58sz4zfSD+P51cft36eGl0xM7UpS6QzN1lr/hcDgG/5ereBo9DSYokHmkwrrN7ae6/yi75ulefszlTQ=
+  app: ek-mm-server
+  on:
+    repo: elanalynn/mentor_match_server
