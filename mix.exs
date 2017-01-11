@@ -19,7 +19,7 @@ defmodule Mmserver.Mixfile do
   def application do
     [mod: {Mmserver, []},
      applications: [:phoenix, :phoenix_pubsub, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :comeonin]]
+                    :phoenix_ecto, :postgrex]]
   end
 
   # Specifies which paths to compile per environment.
@@ -32,15 +32,11 @@ defmodule Mmserver.Mixfile do
   defp deps do
     [{:phoenix, "~> 1.2.1"},
      {:phoenix_pubsub, "~> 1.0"},
-     {:phoenix_ecto, "~> 2.1", override: true},
+     {:phoenix_ecto, "~> 3.0"},
      {:postgrex, ">= 0.0.0"},
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
-     {:cors_plug, "~> 1.1"},
-     {:guardian, "~> 0.10.0"},
-     {:poison, "~> 1.5", override: true},
-     {:comeonin, "~> 2.4"},
-     {:ja_serializer, "~> 0.8.1"}]
+     {:cors_plug, "~> 1.1"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.

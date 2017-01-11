@@ -12,7 +12,7 @@ config :mmserver,
 # Configures the endpoint
 config :mmserver, Mmserver.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "QhKtzWYQQvFNmuOuwKxGcRcRJCfWRZFUy+yanSgZECZ17XdtntzTaoJ4Z9XYn/4/",
+  secret_key_base: "rKzXrAxtaERnAHjoSuF8RmXcv5KgcaOhNOuknSeUcZOzrnlk/0swu5rGI/yF70FL",
   render_errors: [view: Mmserver.ErrorView, accepts: ~w(json)],
   pubsub: [name: Mmserver.PubSub,
            adapter: Phoenix.PubSub.PG2]
@@ -28,15 +28,6 @@ config :phoenix, :format_encoders,
 config :plug, :mimes, %{
   "application/vnd.api+json" => ["json-api"]
 }
-
-config :guardian, Guardian,
-  allowed_algos: ["HS512"], # optional
-  verify_module: Guardian.JWT,  # optional
-  issuer: "Mmserver",
-  ttl: { 30, :days },
-  verify_issuer: true, # optional
-  secret_key: System.get_env("GUARDIAN_SECRET") || "cvA2+3wZ8NRClaSCG4K1dGW8Q675qjYWhSGG6dyTZXI3MEW6Nli82AL0+5N1Y6J0",
-  serializer: Mmserver.GuardianSerializer
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

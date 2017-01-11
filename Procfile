@@ -1,1 +1,1 @@
-web: elixir -S mix phoenix.server
+echo "web: elixir -S mix phoenix.server"

@@ -9,7 +9,7 @@ use Mix.Config
 # kept out of version control and might be hard to recover
 # or recreate for your teammates (or you later on).
 config :mmserver, Mmserver.Endpoint,
-  secret_key_base: "Mt0SQF7zq4lTyy155vdLwBbIk5eTpOCRW8bm6XRQiMARp83mS/+Mbzmuc2blnyJh"
+  secret_key_base: "Eky819aIkROet5bx6UPo8Vx6pfGIxFj/oaOikmYvoPofBiICOGiHVk74gI2Sv5Of"
 
 # Configure your database
 config :mmserver, Mmserver.Repo,

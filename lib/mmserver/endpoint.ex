@@ -34,7 +34,7 @@ defmodule Mmserver.Endpoint do
   plug Plug.Session,
     store: :cookie,
     key: "_mmserver_key",
-    signing_salt: "cl4B9OiT"
+    signing_salt: "MASHkCcH"
 
   plug CORSPlug  
 
